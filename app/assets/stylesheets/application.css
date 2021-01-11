@@ -19,7 +19,9 @@
 
  body {
    background: url(space.jpg) no-repeat fixed;
-   background-opacity: 50%
+   width: 100%;
+   height: auto;
+
  }
 
  .separatelign{
