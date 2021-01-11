@@ -28,13 +28,7 @@
    background-repeat: no-repeat;
    background-size: cover;
  }
-
- html {
-   background: url(space.jpg) no-repeat;
-   width: 100%;
-   height: 100%;
- }
-
+ 
  .separatelign{
   color: white;
   padding: 0px 6px 0px 16px;
