@@ -18,9 +18,9 @@
  }
 
  html {
-   background: url(space.jpg) no-repeat fixed;
+   background: url(space.jpg) no-repeat;
    width: 100%;
-   height: auto;
+   height: 100%;
  }
 
  .separatelign{
