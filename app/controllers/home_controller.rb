@@ -6,5 +6,12 @@ class HomeController < ApplicationController
 
   def fprofile
   end
-  
+
+  # For reconfirm request after receive reminder email every 3 months
+  #def reconfirm(request)
+    #puts "RECONFIRM ACTION?"
+    #request.confirmed_at = Date.current
+    #request.expired = false
+    #request.reminder = false
+  #end
 end

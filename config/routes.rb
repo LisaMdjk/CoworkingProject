@@ -3,8 +3,10 @@ Rails.application.routes.draw do
 
   devise_for :requests
 
+  resources :requests
 
   root 'home#index'
+
   get '/index-requestslist',  to: 'requestslist#indexlist', as: 'waitinglist'
   get '/profile',  to: 'home#fprofile', as: 'fprofile'
   get '/requests-details', to: 'requestslist#requestsdetails', as: 'requestsdetails'
