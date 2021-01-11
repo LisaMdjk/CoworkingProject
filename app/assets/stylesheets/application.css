@@ -17,6 +17,18 @@
    background-color: red;
  }
 
+ body, html {
+   height: 100%;
+ }
+
+ .bg {
+   background: url(space.jpg) no-repeat;
+   height: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+
  html {
    background: url(space.jpg) no-repeat;
    width: 100%;
