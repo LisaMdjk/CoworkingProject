@@ -10,7 +10,7 @@ scheduler = Rufus::Scheduler.new
 #  Rails.logger.flush
 #end
 
-scheduler.every '1m' do
+scheduler.every '1d' do
   puts "Checking requests confirmation..."
   RequestslistController.refresh
   puts "Checking DONE!"
