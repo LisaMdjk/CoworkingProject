@@ -14,7 +14,7 @@ class Request < ApplicationRecord
   # SCOPES
   default_scope {order('confirmed_at ASC').order('status')} # for list request by status (false then true)
   scope :unconfirmed, -> {where(confirmed_at: nil)}
-  scope :confirmed, -> {where.not(confirmed_at: nil, status: 1)}
+  scope :confirmed, -> {where.not(confirmed_at: nil, status: 1, expired: 1)}
   scope :accepted, -> {where(status: true)}
   scope :expired, -> {where(expired: true)}
 
