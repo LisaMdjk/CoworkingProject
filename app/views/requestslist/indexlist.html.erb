@@ -1,0 +1,34 @@
+<div class="waitinglist_main">
+  <h1>All requests</h1>
+  <p>Database is refresh when this page is load. Please use REFRESH button if needed.</p>
+<div class="buttonlot">
+  <%= link_to "HOME", root_path, :class => "buttondetails"%>
+  <%= link_to "SEE MORE DETAILS", requestsdetails_path, :class => "buttondetails" %>
+  <%= link_to "REFRESH", waitinglist_path, :class => "buttondetails"%>
+</div>
+    <table class="requests_tab">
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Biography</th>
+        <th>Registered at</th>
+        <th>Confirmed at</th>
+      </tr>
+      <% @requests.each do |pro| %>
+        <tr>
+          <td><%= pro.name %></td>
+          <td><%= pro.phone_number %></td>
+          <td><%= pro.email %> </td>
+          <td><%= pro.biography %></td>
+          <td><%= pro.created_at %></td>
+          <% if pro.confirmed_at? %>
+            <td><%= pro.confirmed_at %></td>
+          <% else %>
+            <td>WAITING OF CONFIRMATION</td> <br>
+          <% end %>
+          </tr>
+      <%end%>
+    </table>
+
+</div>

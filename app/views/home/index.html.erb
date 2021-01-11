@@ -1,0 +1,20 @@
+<div class="mainhome">
+	<h1 class="welcome">Welcome</h1>
+	<p>
+		Discover with us a new way of working in a warm and professional environment
+	</p>
+
+	<% if request_signed_in? %>
+	  <%= link_to "See my Profile", fprofile_path, :class => 'signuplink'%>
+		<% if current_request.superadmin_role? %>
+			<%= link_to "All requets", waitinglist_path, :class => 'signuplink'%>
+			<p class="loginlink">
+				<a href="/admin">Click here to access Admin dashboard here</a>
+				</p>
+		<% end %>
+	<% else %>
+	  <%= link_to "Sign up", new_request_registration_path, :class => 'signuplink'  %> <br>
+		<p class = 'loginlink'>or <%= link_to "Login here", new_request_session_path %></p>
+	<% end %>
+
+</div>

@@ -1,0 +1,55 @@
+
+<div>
+  <div class="buttonlot">
+    <%= link_to "BACK", waitinglist_path, :class => "buttondetails"%>
+  </div>
+
+  <table class="requestdetails_tab">
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Biography</th>
+      <th>Registered at</th>
+      <th>Confirmed at</th>
+      <th>Status</th>
+      <th>Expired</th>
+      <th>Reminder</th>
+      <th>Role</th>
+    </tr>
+    <% @requests.each do |pro| %>
+      <tr>
+        <td><%= pro.name %></td>
+        <td><%= pro.phone_number %></td>
+        <td><%= pro.email %> </td>
+        <td><%= pro.biography %></td>
+        <td><%= pro.created_at %></td>
+        <% if pro.confirmed_at? %>
+          <td><%= pro.confirmed_at %></td>
+        <% else %>
+          <td>WAITING OF CONFIRMATION</td> <br>
+        <% end %>
+        <% if pro.status == true %>
+          <td> Accepted </td>
+        <% else %>
+            <td></td>
+        <% end %>
+        <% if pro.expired == true %>
+          <td>EXPIRED</td>
+        <% else %>
+          <td></td>
+        <% end %>
+        <% if pro.reminder == true %>
+          <td>Done</td>
+        <% else %>
+          <td></td>
+        <% end %>
+        <% if pro.superadmin_role? %>
+          <td>ADMIN</td>
+        <% else %>
+          <td>USER</td> <br>
+        <% end %>
+        </tr>
+    <%end%>
+  </table>
+</div>

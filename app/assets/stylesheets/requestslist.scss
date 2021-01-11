@@ -1,0 +1,81 @@
+// Place all the styles related to the waitinglist controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.waitinglist_main{
+  background-color: grey;
+  opacity: 90%;
+  width: auto;
+  position: relative;
+  top: 10px;
+  padding: 30px;
+}
+
+.waitinglist_main h1, h4{
+  font-family: 'Raleway';
+  font-weight: bold;
+}
+
+.waitinglist_main p{
+  width: auto;
+}
+/***********REQUESTS VIEW*********/
+.requests_tab{
+  font-size: 1em;
+  table-layout: auto;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid black;
+}
+
+.requests_tab td, th{
+  border: thin solid black;
+  width: 50%;
+}
+
+.requests_tab th{
+  background-color: black;
+  color:grey;
+  width: 50%;
+}
+
+/***********REQUESTS DETAILS VIEW*********/
+.requestdetails_tab{
+  background-color: white;
+  font-size: 0.8em;
+  table-layout: auto;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid black;
+}
+
+.requestdetails_tab td, th{
+  border: thin solid black;
+  width: 50%;
+}
+
+.requestdetails_tab th{
+  background-color: grey;
+  width: 50%;
+}
+
+.buttonlot{
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+}
+.buttondetails{
+  border-color: white;
+  border-radius: 20px;
+  border-style: solid;
+  color: white;
+  padding: 8px;
+  font-size: 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+}
+.buttondetails:hover{
+  background-color: white;
+  color: grey;
+}

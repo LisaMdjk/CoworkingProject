@@ -1,0 +1,71 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.welcome{
+  font-size: 3em;
+  font-family: 'Raleway';
+}
+.mainhome{
+  color: white;
+  font-size: 2em;
+  width: 500px;
+  margin: auto;
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  margin-right: auto;
+}
+
+.main p{
+  font-style: italic;
+  width: 600px;
+}
+
+.signuplink{
+  border-color: white;
+  border-radius: 20px;
+  border-style: solid;
+  color: white;
+  padding: 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.signuplink:hover{
+  background-color: white;
+  color: grey;
+}
+
+.loginlink{
+  font-size: 0.6em;
+  padding-left: 10px;
+}
+
+.loginlink a{
+  text-decoration: none;
+  color: white;
+}
+
+.loginlink a:hover{
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+a.leBouton:hover {
+  background-color: yellow;
+  color:red;
+}
+ /*******PROFIL VIEW*********/
+.mainprofile{
+  background-color: grey;
+  opacity: 90%;
+  width: 500px;
+  position: relative;
+  top: 30px;
+  left: 55px;
+  padding: 30px;
+}
+
+.mainprofile h1{
+  font-family: 'Raleway';
+  font-weight: bold;
+}

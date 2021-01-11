@@ -1,0 +1,12 @@
+<div class="mainprofile">
+  <h1>Profil de <%= current_request.name %> </h1>
+  <p>
+    Name: <%= current_request.name %> <br>
+    Phone: <%= current_request.phone_number %> <br>
+    Email: <%= current_request.email %> <br>
+    Biography: <%= current_request.biography %> <br>
+  </p>
+
+  <%= link_to 'Edit profile', edit_request_registration_path, :class => 'signuplink' %>
+  <%= link_to "Back", root_path, :class => 'signuplink'  %> <br>
+</div>

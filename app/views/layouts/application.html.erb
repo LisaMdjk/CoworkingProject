@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CoworkApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <title>cooPlace</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <body>
+
+    <div class="sidebarnav">
+      <div class="coopstation_borderout">
+        <h1 id="coopstation">Coop Station</h1>
+      </div>
+      <%= link_to 'Home', root_path, :class => 'sidebarnavlink' %>
+      <p class="separatelign">- - -</p>
+      <% if request_signed_in? %>
+        <%= link_to "Profile", fprofile_path, :class => 'sidebarnavlink' %>
+        <%= link_to 'Edit profile', edit_request_registration_path, :class => 'sidebarnavlink' %>
+        <p class='loggedin'>Logged in as <strong><%= current_request.name %></strong><br>
+          ( <%= current_request.email %>) <br>
+          <%= link_to "Logout", destroy_request_session_path, method: :delete, :class => ''  %>
+        </p>
+      <% else %>
+        <%= link_to "Sign up", new_request_registration_path, :class => 'sidebarnavlink'  %>
+        <%= link_to "Login", new_request_session_path, :class => 'sidebarnavlink'  %>
+      <% end %>
+    </div>
+
+    <div class="main">
+      <% flash.each do |type, msg| %>
+        <div class="alert alert-warning">
+            <%= notice %>
+            <%= alert %>
+        </div>
+      <% end %>
+        <%= yield %>
+    </div>
+
+  </body>
+</html>
