@@ -13,7 +13,7 @@ class RequestslistController < ApplicationController
     @requests = Request.all
     @requests.each do |request| #Pour chaque request
       if request.confirmed_at != nil                 #Si le request est sur la waitinglist(aka confirmed)
-        if request.confirmed_at > Date.current-1.hour # ET que sa confirmation remonte a + de 3 mois
+        if request.confirmed_at > Date.current-3.month # ET que sa confirmation remonte a + de 3 mois
           request.update(expired: true)
           if request.reminder == false             # ET qu'il n'a pas recu un rappel par email
             ReminderMailer.reminder_mail(request).deliver_now
